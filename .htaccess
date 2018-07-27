@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /pizzaria/index.php?url=$1 [QSA,L]
+Options All -Indexes
+ErrorDocument 403 /pizzaria/error/E403
